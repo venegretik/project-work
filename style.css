@@ -5,9 +5,18 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.container-main {
+    max-width: 1280px;
+    margin: 0px auto;
+}
+
 a {
     text-decoration: none;
     color: #000000;
+}
+
+main {
+    padding: 0px 15px;
 }
 
 .header-full {
@@ -77,15 +86,17 @@ a {
 
 .category-list {
     width: 100%;
-    padding: 0px 15px;
+    margin-bottom: 19px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.category-list a{
+
+.category-list a {
     box-shadow: 0 2px 9px 8px rgb(0 0 0 / 2%);
     width: 31%;
 }
+
 .category-item {
     width: 100%;
     display: flex;
@@ -93,7 +104,6 @@ a {
     flex-direction: column;
     align-items: center;
     padding-bottom: 10px;
-    margin-bottom: 19px;
     min-height: 177px;
     border-radius: 10px;
 }
@@ -102,6 +112,7 @@ a {
     max-width: 130px;
     padding: 10px 0px;
     max-height: 100px;
+    object-fit: cover;
 }
 
 .category-title {
@@ -153,3 +164,77 @@ a {
     display: flex;
 }
 
+.menu-mobile {
+    display: none;
+}
+
+@media(max-width:980px) {
+    .menu-mobile {
+        display: flex;
+        font-size: 40px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu-show {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        display: none;
+        cursor: default;
+        background: #ffffff;
+        width: 400px;
+        padding: 15px;
+    }
+
+    .menu-show-container {
+        width: 100%;
+        position: relative;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: -15px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .header-contact-mobile {
+        font-size: 14px;
+    }
+
+    .header-nav-mobile {
+        margin-bottom: 15px;
+    }
+
+    .header-nav-mobile ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        row-gap: 5px;
+    }
+
+    .header-nav-mobile ul li {
+        font-size: 16px;
+    }
+
+    .header-contact-mobile ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    .header-contact-mobile ul li p {
+        display: inline-flex;
+        column-gap: 10px;
+    }
+
+    .header-contact {
+        display: none;
+    }
+
+    .header-nav {
+        display: none;
+    }
+}
